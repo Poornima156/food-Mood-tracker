@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Mood</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            color: white;
+            padding-top: 100px;
+        }
+        button {
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            background: black;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Food Mood Generator</h1>
+<p>Choose your mood:</p>
+
+<button onclick="suggestFood('happy')">Happy</button>
+<button onclick="suggestFood('sad')">Sad</button>
+<button onclick="suggestFood('lazy')">Lazy</button>
+
+<h2 id="result"></h2>
+
+<script>
+function suggestFood(mood) {
+    let food = "";
+
+    if (mood === "happy") {
+        food = "Pizza or Ice Cream ";
+    } 
+    else if (mood === "sad") {
+        food = "Chocolate  or Fries ";
+    } 
+    else {
+        food = "Maggi  or Sandwich ";
+    }
+
+    document.getElementById("result").innerHTML =
+        "You should eat: " + food;
+}
+</script>
+
+</body>
+</html>
